@@ -1,0 +1,35 @@
+
+.jumbotron {
+    text-align: right;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 2cm 2cm 2cm 2cm;
+    background: linear-gradient(45deg, #ad1561, #631781, #3d0255);
+    color: white;
+}
+
+.jumbotron h1 {
+    font-size: 8em;
+}
+
+.jumbotron p {
+    font-size: 4em;
+}
+
+.container,
+body {
+    background-color: #e2d7ff;
+}
+
+.form-control,
+.btn {
+    height: 1.8cm;
+    padding: 8px 14px;
+    font-size: 28px;
+}
+
+.form-group,
+.btn {
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+}

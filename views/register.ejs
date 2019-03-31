@@ -1,0 +1,69 @@
+<%- include('partials/signupheader') %>
+<div class="jumbotron">
+    <h1>Welcome New User!</h1>
+    <p>Register here</p>
+</div>
+<div class="container">
+    <div class="container">
+
+        <h1 style="text-align:center; font-family:'Ubuntu', sans-serif; font-weight:bold;">Enter your Details here!</h1>
+        <% if(locals.error) { %>
+            <div class="alert alert-danger"><%= error %></div>
+        <% } %>
+    </div>
+    <form method="post">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-lg-6">
+                    <input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" value="<%= locals.firstName || '' %>" required/>
+                </div>
+                <div class="col-lg-6">
+                    <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name" value="<%= locals.lastName || '' %>" required />
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div>
+            <label>
+                <input type="radio" name="UserType" value="1" checked disabled>
+            </label> Student
+            <label>
+                <input type="radio" name="UserType" value="2" disabled>
+            </label> Faculty
+        </div>
+        <br/>
+        <!--<div class="form-group">
+            <label for="type"> Type of User: </label>
+            <select class="form-control" id="type">
+                <option value="">--Select--</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+
+            </select>
+        </div>-->
+
+        <div class="form-group">
+            <input id="username" name="username" type="text" class="form-control" placeholder="User Name" value="<%= locals.username || '' %>" required />
+            <span>Note: If you are a student, put your roll number. If you are a faculty, put your faculty registration number</span>
+        </div>
+        <div class="form-group">
+            <input id="Email" name="Email" class="form-control" type="email" placeholder="E-Mail" value="<%= locals.Email || '' %>" required />
+        </div>
+        <div class="form-group">
+            <input id="password" name="password" class="form-control" type="password" placeholder="Password" required/>
+        </div>
+        <!--<div class="form-group">
+            <input id="password2" name="password2" class="form-control" type="password" placeholder="Re-type Password" required/>
+        </div>-->
+        <div class="row">
+            <div class="col-lg-6">
+                <button type="submit" class="btn btn-block btn-success">Submit</button>
+            </div>
+
+            <div class="col-lg-6">
+                <a href="/login" class="btn btn-block btn-danger">Cancel</a>
+            </div>
+        </div>
+    </form>
+
+</div>

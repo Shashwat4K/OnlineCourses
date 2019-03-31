@@ -1,0 +1,78 @@
+<div class="jumbotron">
+    <h1>Welcome</h1>
+    <p>Shashwat Kadam</p>
+</div>
+<div class="container-extended" ng-app="login">
+    <div class="row">
+        <div class='col-lg-6' id="student" ng-controller="studentController">
+            <div class="forms">
+                <h1>
+                    Student? Login here!
+                </h1>
+                <hr/>
+                <form name="studentForm">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <!--<label for="RollNo">Roll Number: </label>-->
+                                <input type="text" name="RollNo" id="RollNo" class="form-control" placeholder="Roll Number" ng-model="studentRollNo" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <!--<label for="spassword">Password: </label>-->
+                                <input type="password" name="spassword" id="spassword" class="form-control" placeholder="Password" ng-model="studentPassword" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="row">
+                        <div class="col-lg-6">
+                            <span style="color:red" ng-show="studentForm.RollNo.$dirty && studentForm.RollNo.$invalid">
+                                <span ng-show = "studentForm.RollNo.$error.required">Roll Number is required.</span>
+                            </span>
+                        </div>
+                        <div class="col-lg-6">
+                            <span style="color:red" ng-show="studentForm.spassword.$dirty && studentForm.spassword.$invalid">
+                                <span ng-show = "studentForm.spassword.$error.required">Password is required.</span>
+                            </span>
+                        </div>
+                    </div>-->
+                    <button type="submit" class="btn btn-lg btn-success">Sign-In</button>
+                </form>
+            </div>
+        </div>
+
+        <div class='col-lg-6' id="faculty" ng-controller="facultyController">
+            <div class="forms">
+                <h1>
+                    Faculty? Login here!
+                </h1>
+                <hr/>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <!--<label for="RegNo">Faculty Registration number: </label>-->
+                                <input type="text" id="RegNo" class="form-control" placeholder="Faculty Number" required/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <!--<label for="fpassword">Password: </label>-->
+                                <input type="password" id="fpassword" class="form-control" placeholder="Password" required/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-lg btn-success">Sign-In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+    <p style="text-align: center;">Not a member? <a href='/register'><button>Sign-Up</button></a></p>
+</div>
+</body>
+
+</html>

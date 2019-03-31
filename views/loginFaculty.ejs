@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+<div class="jumbotron">
+    <h1>Welcome</h1>
+    <p>Shashwat Kadam</p>
+</div>
+<div class="container-extended">
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(locals.success) { %>
+        <div class="alert alert-success"><%= success %></div>
+    <% } %>
+<div class="row">
+<div class='col-lg-12' id="faculty">
+    <div class="forms">
+        <h1>
+            Faculty? Login here!
+        </h1>
+        <hr/>
+        <form method="post">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+
+                        <input type="text" id="fusername" name="fusername" class="form-control" placeholder="User-Name" value="<%= locals.username || '' %>" />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+
+                        <input type="password" id="fpassword" name="fpassword" class="form-control" placeholder="Password" required/>
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-lg btn-success">Sign-In</button>
+            <p style="text-align: center;">Not a member? <a href='/registerFaculty' class="btn btn-link">Sign-Up</a></p>
+            <a class="btn btn-warning btn-lg" href="/login">Not a faculty? Head here!</a>
+        </form>
+    </div>
+</div>
+</div>
+</div>
